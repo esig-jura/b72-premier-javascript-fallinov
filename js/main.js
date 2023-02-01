@@ -39,6 +39,11 @@ const inpnutCommenaire = document.querySelector("#commentaire");
 // Ecouter l'envoi du formulaire
 form.addEventListener("submit", function ajouterCommentaire(event){
     event.preventDefault(); // Stoppe l'envoi du formulaire
+    // Si commentaire vide, avertir utilisateur
+    if (inpnutCommenaire.value === "") {
+        alert("Commentaire vide !");
+        return; // Stoppe l'événement
+    }
     // ajoute le contenu du champ commentaire à la liste
     olCommentaires.innerHTML += "<li>" + inpnutCommenaire.value + "</li>";
     // Vide le champ commentaire
