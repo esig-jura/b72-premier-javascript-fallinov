@@ -1,5 +1,19 @@
 "use strict";
 
+// Récupérer le prénom du visiteur
+let celcius = prompt("Entrez la température en °C :");
+// Converti celcius en nombre
+celcius = Number(celcius);
+// Si celcius n'est pas un nombre => on affiche une erreur
+if(isNaN(celcius)) {
+    alert('Entrez un nombre !');
+} else {
+    let fahrenheit = celcius * 9 / 5 + 32;
+    alert(`${celcius}°C = ${fahrenheit}°F`);
+}
+
+
+
 // alert("Bonjour le monde !");
 let nom = "Steve";
 // Affiche la variable dans la console
@@ -51,3 +65,4 @@ form.addEventListener("submit", function ajouterCommentaire(event){
     // Redonne le focus au champ commentaire
     inpnutCommenaire.focus();
 });
+
